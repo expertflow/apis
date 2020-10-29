@@ -24,7 +24,7 @@ paths:
                 value:
                   timezone:
                     - name: Asia/Karachi
-        description: Body example
+        description: example of description body
       responses:
         '200':
           description: 'OK'
