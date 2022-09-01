@@ -1,0 +1,1499 @@
+{
+	"info": {
+		"_postman_id": "e176ecd6-38ce-4ace-8f66-fcf677b3096b",
+		"name": "Timezone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Timezone",
+			"item": [
+				{
+					"name": "To add timezone setting",
+					"id": "b5e2bd86-ffc0-4701-99b5-b06f4152aa11",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"timezone\": [\n    {\n      \"name\": \"Asia/Karachi\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/general/timezone",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"general",
+								"timezone"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "3344f5db-6777-4812-a985-6356a0d6b537",
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"timezoneId\": \"<integer>\",\n  \"name\": \"<string>\"\n}"
+						},
+						{
+							"id": "66e8b90a-55e9-4250-aa14-947508050037",
+							"name": "BAD REQUEST",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "f4f9e248-73fc-4d88-bdda-8d08314e5642",
+							"name": "NOT FOUND",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "999e5d1a-d81a-41d9-b081-83dd5f747cca",
+							"name": "INTERNAL SERVER ERROR",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "4598debb-5366-4395-ae3a-72345dfee871",
+							"name": "BAD GATEWAY",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									]
+								}
+							},
+							"status": "Bad Gateway",
+							"code": 502,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "ef4f8b20-d3be-495d-be12-411ab4f21fc0",
+							"name": "SERVICE UNAVAILABLE",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									]
+								}
+							},
+							"status": "Service Unavailable",
+							"code": 503,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "0e064ee5-f409-4373-95cd-722abba475b3",
+							"name": "GATEWAY TIMEOUT",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									]
+								}
+							},
+							"status": "Gateway Timeout",
+							"code": 504,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "a69ca4ff-1775-4231-966c-cf359d501e53",
+							"name": "Unexpected error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<long>\",\n  \"message\": \"<string>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "To read selected timezone",
+					"id": "8e89a621-861b-4ba8-b876-c8422e795e77",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/general/timezone?timezoneId=-57148411",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"general",
+								"timezone"
+							],
+							"query": [
+								{
+									"key": "timezoneId",
+									"value": "-57148411",
+									"description": "(Required) To fetch a particular response"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "1e9bc077-488b-45d7-8a90-a3d74d7a722e",
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"timezoneId\": \"<integer>\",\n  \"name\": \"<string>\"\n}"
+						},
+						{
+							"id": "376715ad-b525-4b69-b214-7dd680ebc5a3",
+							"name": "BAD REQUEST",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "5bcc3a99-1ecf-4192-bafc-22d42c3b21d3",
+							"name": "NOT FOUND",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "27275e0a-a397-4fed-9519-2959b6418e9f",
+							"name": "INTERNAL SERVER ERROR",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "ddfedf6e-7bc9-4b21-9ff8-0f91083a1544",
+							"name": "BAD GATEWAY",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Bad Gateway",
+							"code": 502,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "7da25a92-dd2b-4fb8-a811-3970bd82a15f",
+							"name": "SERVICE UNAVAILABLE",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Service Unavailable",
+							"code": 503,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "a21a6a31-3c6b-4356-aa3d-a7bd7ffd0b35",
+							"name": "GATEWAY TIMEOUT",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Gateway Timeout",
+							"code": 504,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "95dbb59c-4adb-4480-b674-e27c48e84f83",
+							"name": "Unexpected error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<long>\",\n  \"message\": \"<string>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "To update timezone setting by id",
+					"id": "336a31c4-f794-40d8-b922-4231d81ea7b6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"timezone\": [\n    {\n      \"timezoneId\": 1,\n      \"name\": \"Asia/Karachi\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/general/timezone?timezoneId=-57148411",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"general",
+								"timezone"
+							],
+							"query": [
+								{
+									"key": "timezoneId",
+									"value": "-57148411",
+									"description": "(Required) Timezone id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "9a7fdb88-eaf4-4198-b20b-8f1d768cbb63",
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"timezone\": {\n    \"timezoneId\": \"<integer>\",\n    \"name\": \"<string>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"timezoneId\": \"<integer>\",\n  \"name\": \"<string>\"\n}"
+						},
+						{
+							"id": "5e1d7428-1b17-44e4-9237-ca5788c26e99",
+							"name": "BAD REQUEST",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"timezone\": {\n    \"timezoneId\": \"<integer>\",\n    \"name\": \"<string>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "ae8f665f-d126-4889-8115-66df97b2b889",
+							"name": "NOT FOUND",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"timezone\": {\n    \"timezoneId\": \"<integer>\",\n    \"name\": \"<string>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "4aae6dd5-682e-4f81-9de2-ced2695ae73c",
+							"name": "INTERNAL SERVER ERROR",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"timezone\": {\n    \"timezoneId\": \"<integer>\",\n    \"name\": \"<string>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "127f34c0-6cc6-46a8-a5f4-5cf50ddc2276",
+							"name": "BAD GATEWAY",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"timezone\": {\n    \"timezoneId\": \"<integer>\",\n    \"name\": \"<string>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Bad Gateway",
+							"code": 502,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "a96192d8-6931-4342-8167-071ae1ef27df",
+							"name": "SERVICE UNAVAILABLE",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"timezone\": {\n    \"timezoneId\": \"<integer>\",\n    \"name\": \"<string>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Service Unavailable",
+							"code": 503,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "d99680e2-6fb5-4185-b967-1e2dcb3020ba",
+							"name": "GATEWAY TIMEOUT",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"timezone\": {\n    \"timezoneId\": \"<integer>\",\n    \"name\": \"<string>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Gateway Timeout",
+							"code": 504,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "19204a5c-5531-4046-a01c-6e6409d2bcf3",
+							"name": "Unexpected error",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"timezone\": {\n    \"timezoneId\": \"<integer>\",\n    \"name\": \"<string>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<long>\",\n  \"message\": \"<string>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "To delete timezone by id",
+					"id": "893b3c4d-b01e-449b-88ed-92a955fb18fc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/general/timezone?timezoneId=-57148411",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"general",
+								"timezone"
+							],
+							"query": [
+								{
+									"key": "timezoneId",
+									"value": "-57148411",
+									"description": "(Required) ID of the timezone to be deleted"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "735adcb2-0ba0-4ed7-9081-28133f543295",
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "f4bc2aaa-ba8a-4441-9a33-643e51553ad9",
+							"name": "BAD REQUEST",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "1ecbed44-893e-4394-9b40-895aa1f013ed",
+							"name": "NOT FOUND",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "3112b4eb-730e-46e8-ad15-2af56a51b37c",
+							"name": "INTERNAL SERVER ERROR",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "bdebc80c-d6b0-4324-96c9-02f53c3640d4",
+							"name": "BAD GATEWAY",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Bad Gateway",
+							"code": 502,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "a3b6c9cc-dd60-4a6a-a278-8651e1433cb7",
+							"name": "SERVICE UNAVAILABLE",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Service Unavailable",
+							"code": 503,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "9930be19-e3a1-4f71-be1e-c5df4d7e9acf",
+							"name": "GATEWAY TIMEOUT",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Gateway Timeout",
+							"code": 504,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<integer>\",\n  \"message\": \"<string>\"\n}"
+						},
+						{
+							"id": "5cc5f338-69df-41e9-95f1-69c9484899c0",
+							"name": "Unexpected error",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/general/timezone?timezoneId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"general",
+										"timezone"
+									],
+									"query": [
+										{
+											"key": "timezoneId",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"code\": \"<long>\",\n  \"message\": \"<string>\"\n}"
+						}
+					]
+				}
+			],
+			"id": "3ac4bd52-1a8d-4473-8227-02f32a1d99e4"
+		},
+		{
+			"name": "Get timezones list",
+			"id": "d25583c3-7f72-4a3c-863f-b8c2906ec003",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/timezones?limited=10",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"timezones"
+					],
+					"query": [
+						{
+							"key": "limited",
+							"value": "10",
+							"description": "Number of timezone results to be displayed"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "62661b43-3c4b-443a-bfbf-c113f517d222",
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/timezones?limit=10",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"timezones"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n  \"timezoneId\": \"<integer>\",\n  \"name\": \"<string>\"\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"id": "684faa4f-d003-4ff4-8e0b-b94932f6ae06",
+			"key": "baseUrl",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}

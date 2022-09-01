@@ -1,0 +1,399 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Timezone
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /general/timezone:
+    post:
+      summary: 'To add timezone setting' 
+      tags:
+        - Timezone
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                  name:
+                    type: string
+                    example: English
+            examples:
+              example-1:
+                value:
+                  timezone:
+                    - name: Asia/Karachi
+        description: example of description body
+      responses:
+        '200':
+          description: 'OK'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/timezone'
+        '400':
+          description: 'BAD REQUEST'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/badRequest'
+        '404':
+          description: 'NOT FOUND'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/notFound'
+        '500':
+          description: 'INTERNAL SERVER ERROR'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/internalServerError'
+        '502':
+          description: 'BAD GATEWAY'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/badGateway'
+        '503':
+          description: 'SERVICE UNAVAILABLE'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/serviceUnavailable'
+        '504':
+          description: 'GATEWAY TIMEOUT'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/gatewayTimeout'
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    get:
+      summary: 'To read selected timezone'
+      tags:
+        - Timezone
+      parameters:
+        - name: timezoneId
+          in: query
+          description: 'To fetch a particular response'
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: 'OK'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/timezone'
+        '400':
+          description: 'BAD REQUEST'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/badRequest'
+        '404':
+          description: 'NOT FOUND'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/notFound'
+        '500':
+          description: 'INTERNAL SERVER ERROR'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/internalServerError'
+        '502':
+          description: 'BAD GATEWAY'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/badGateway'
+        '503':
+          description: 'SERVICE UNAVAILABLE'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/serviceUnavailable'
+        '504':
+          description: 'GATEWAY TIMEOUT'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/gatewayTimeout'
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: 'To update timezone setting by id' 
+      tags:
+        - Timezone
+      parameters:
+        - in: query
+          name: timezoneId
+          required: true
+          description: "Timezone id"
+          schema:
+            type: integer
+            format: int32  
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                timezone:
+                  $ref: '#/components/schemas/timezone'
+            examples:
+              example-1:
+                value:
+                  timezone:
+                    - timezoneId: 1
+                      name: Asia/Karachi
+        description: Body example
+      responses:
+        '200':
+          description: 'OK'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/timezone'
+        '400':
+          description: 'BAD REQUEST'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/badRequest'
+        '404':
+          description: 'NOT FOUND'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/notFound'
+        '500':
+          description: 'INTERNAL SERVER ERROR'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/internalServerError'
+        '502':
+          description: 'BAD GATEWAY'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/badGateway'
+        '503':
+          description: 'SERVICE UNAVAILABLE'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/serviceUnavailable'
+        '504':
+          description: 'GATEWAY TIMEOUT'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/gatewayTimeout'
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      summary: 'To delete timezone by id' 
+      tags:
+        - Timezone
+      parameters:
+        - in: query
+          name: timezoneId
+          required: true
+          description: "ID of the timezone to be deleted"
+          schema:
+            type: integer
+            format: int32 
+      responses:
+        '200':
+          description: 'OK'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/deleteResponse'
+        '400':
+          description: 'BAD REQUEST'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/badRequest'
+        '404':
+          description: 'NOT FOUND'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/notFound'
+        '500':
+          description: 'INTERNAL SERVER ERROR'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/internalServerError'
+        '502':
+          description: 'BAD GATEWAY'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/badGateway'
+        '503':
+          description: 'SERVICE UNAVAILABLE'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/serviceUnavailable'
+        '504':
+          description: 'GATEWAY TIMEOUT'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/gatewayTimeout'
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'              
+  /timezones:
+    get:
+      summary: Get timezones list
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                properties:
+                  timezoneId:
+                    type: integer
+                    format: int32
+                    example: 1
+                  name:
+                    type: string
+                    example: Asia/Karachi
+              examples:
+                example-1:
+                  value:
+                    - timezoneId: 1
+                      name: Asia/Karachi
+                  description: Pull a list of timezones from DB
+      parameters:
+        - schema:
+            type: integer
+            default: '10'
+          in: query
+          name: limit
+          description: Number of timezone results to be displayed               
+components:
+  schemas:
+    timezone:
+      type: object
+      required:
+        - timezoneId
+      properties:
+        timezoneId:
+          type: integer
+          format: int32
+          example: 1
+        name:
+          type: string
+          example: Asia/Karachi  
+    deleteResponse:
+      title: Deletion Successful Response
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+          example: 200
+        message:
+          type: string
+          example: deletion_successful
+    badRequest:
+        title: Bad Request
+        type: object
+        properties:
+            code:
+              type: integer
+              format: int32
+            message:
+              type: string
+    notFound:
+        title: Not Found
+        type: object
+        properties:
+            code:
+              type: integer
+              format: int32
+            message:
+              type: string        
+    internalServerError:
+        title: Internal Server Error
+        type: object
+        properties:
+            code:
+              type: integer
+              format: int32
+            message:
+              type: string     
+    badGateway:
+        title: Bad Gateway
+        type: object
+        properties:
+            code:
+              type: integer
+              format: int32
+            message:
+              type: string 
+    serviceUnavailable:
+        title: Service Unavailable
+        type: object
+        properties:
+            code:
+              type: integer
+              format: int32
+            message:
+              type: string 
+    gatewayTimeout:
+        title: Gateway Timeout
+        type: object
+        properties:
+            code:
+              type: integer
+              format: int32
+            message:
+              type: string
+    timezones:
+        type: array
+        title: timezones
+    Error:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int64
+        message:
+          type: string
