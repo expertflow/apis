@@ -1433,7 +1433,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{baseUrl}}/timezones?limited=10",
+					"raw": "{{baseUrl}}/timezones?limit-modified=10",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -1442,7 +1442,7 @@
 					],
 					"query": [
 						{
-							"key": "limited",
+							"key": "limit-modified",
 							"value": "10",
 							"description": "Number of timezone results to be displayed"
 						}
